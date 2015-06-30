@@ -1,12 +1,30 @@
 #ifndef ResourcesID
 #define ResourcesID
 
+#pragma warning(disable: 4996)
+
+
+// Const path
+// Sprites
+#define spritePath	"../Assets/Sprites/"
+#define bgPath		"../Assets/Sprites/BG/"
+#define canonPath	"../Assets/Sprites/Canon/"
+
+// Audio
+#define musicPath	"../Assets/Audio/Musics/"
+#define soundPath	"../Assets/Audio/Sounds/"
+
+
+std::string MakePath(std::string p_constPath, std::string p_path) {
+	return p_constPath.append(p_path);
+}										
+
 namespace Texture
 {
 	enum ID
 	{
-		ELEPHANT_DE_MER,
-		POW_POW_POW
+		Lvl1_Bg_ID,
+		Bullet_ID
 	};
 }
 
@@ -14,8 +32,8 @@ namespace Sound
 {
 	enum ID
 	{
-		TestMusicID,
-		TestSoundFXID
+		TestMusic_ID,
+		TestSoundFX_ID
 	};
 }
 

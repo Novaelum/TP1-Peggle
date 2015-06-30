@@ -9,10 +9,10 @@ int WINAPI _tWinMain(HINSTANCE hInstance,
 	HINSTANCE prevHInstance, 
 	LPTSTR cmd, int showCmd)
 {
-	Engine* engine = new Engine(hInstance, "SpriteApp");
+	Engine* engine = new Engine(hInstance, "Peggle", 1280, 1024);
 	gEngine = engine;
 
-	engine->Init();
+	gEngine->Init();
 
 	Peggle* game = new Peggle();
 
