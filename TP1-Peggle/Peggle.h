@@ -1,11 +1,15 @@
 #pragma once
-
 #include "Engine.h"
 #include "Component.h"
+#include "GUtils.h"
+#include "Target.h"
+#include "Background.h"
+#include "Canon.h"
+#include "Bin.h"
+#include "Bullet.h"
 
-class Peggle :
-	public Component
-{
+
+class Peggle : public Component {
 public:
 	Peggle();
 	~Peggle();
@@ -15,9 +19,18 @@ public:
 	void Draw();
 	void Stop();
 
+	void CheckCollisions();
+
 private:
-	std::string MakePath(std::string p_constPath, std::string p_path) { 
-		return p_constPath.append(p_path); 
-	}
+	void SpawnTargets(int min, int max);
+	D3DXVECTOR2 GeneratePosNumbers();
+
+	Background*					mBg;
+	Canon*						mCanon;
+	Bin*						mBin;
+	std::vector<Target*>		mTargets;
+	std::vector<D3DXVECTOR2>	mTargetsPos;
+	std::vector<Collider*>		mColliders;
+	int							mScore;
 };
 

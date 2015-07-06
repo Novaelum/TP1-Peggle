@@ -16,10 +16,14 @@ namespace Texture
 {
 	enum ID
 	{
-		Lvl1_Bg_ID,
+		Background_ID,
 		Bullet_ID,
 		Canon_ID,
-		Target_ID,
+		TargetOn_ID,
+		TargetOff_ID,
+		Bin_ID,
+		Bazinga_ID,
+		Boom_ID
 	};
 }
 

@@ -1,19 +1,18 @@
 #pragma once
-#include "Sprite.h"
-#include "ResourceIDs.h"
+#include "GUtils.h"
 
 
-class Target
-{
+class Target {
 public:
 	Target();
 	~Target();
 
+	Sprite* GetSprite()					{ return mSprite; }
+	Collider* GetCollider()				{ return mCollider; }
+
 private:
-	Sprite* sprite;
-
-
-
+	Sprite*		mSprite;
+	Collider*	mCollider;
 
 };
 
